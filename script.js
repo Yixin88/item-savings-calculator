@@ -16,4 +16,16 @@ function getsDiscount(rec) {
       return false;
     }
   }
-  
+
+  function findDiscount(price) {
+    const cents = getCents(price);
+    if (cents == 67) {
+      return 0.3;
+    } else if (cents == 95) {
+      return 0.4;
+    } else if (cents == 99) {
+      return 0.5;
+    } else {
+      return 0;
+    }
+  }
